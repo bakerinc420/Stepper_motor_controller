@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stm32 http server CGI</title>
+    <meta charset="utf-8" />
+</head>
+<body>
+    <p>This application controls LEDS: Led2 and Led3</p>
+
+    <form method="get" action="/leds.cgi">
+        <!--#tag1-->LED1 (red)
+        <br>
+        <!--#tag2-->LED2 (blue)
+        <br>
+        <input value="Send" type="submit">
+    </form>
+    <br>
+
+    <form method="get" action="/motor.cgi">
+        
+        <label for="direction">Выберите направление движения мотора:</label>
+        <br>
+       
+        <select name="direction" id = "direction" >
+            <!--#tag3-->
+        </select>     
+        <br>
+        <label for="speed">Установите скорость мотора:</label><br>
+        <!--#tag4-->  
+        <br>       
+        <label for="numberInput">Введите число (от 0 до 1000):</label><br>
+        <!--#tag5-->
+        <br>
+        <label for="VirtualSteps">Установите шаг (от 6400 до 1000000):</label><br>
+        <!--#tag7-->
+        <br>
+        <input value="Send" type="submit">
+        <br>
+        
+        <br>
+    </form>
+
+
+
+    <div class="calibration-cgi">
+        <h3>Калибровка мотора</h3><br>
+        <p>Или используйте длинное нажатие кнопки на плате</p>
+        <!--# tag8 --><!-- Статус калибровки -->
+    </div>
+    <br>
+
+
+    <br>
+
+
+</body>
+</html>
